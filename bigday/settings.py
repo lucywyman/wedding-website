@@ -136,7 +136,7 @@ DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 BRIDE_AND_GROOM = 'Lucy and Eli'
 
 # This is used in links in invitations
-WEDDING_WEBSITE_URL = 'http://lucyandeli.wedding'
+WEDDING_WEBSITE_URL = 'https://lucyandeli.wedding'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
