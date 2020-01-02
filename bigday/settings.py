@@ -127,7 +127,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'Lucy and Eli <wyman.lucy@gmail.com>'
+DEFAULT_WEDDING_FROM_EMAIL = 'wyman.lucy@gmail.com'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = 'wyman.lucy@gmail.com'
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
