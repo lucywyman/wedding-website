@@ -65,8 +65,14 @@ def send_invitation_email(party, test_only=False, recipients=None):
         msg.send()
 
 
-def send_all_invitations(test_only, mark_as_sent):
-    to_send_to = Party.objects.filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+def send_all_invitations(options):
+    test_only = not options['send']
+    mark_as_sent = options['mark_sent']
+    if options['resend']:
+        to_send_to = Party.objects.filter(invitation_opened=None).exclude(is_attending=False)
+    else:
+        to_send_to = Party.objects.filter(is_invited=True, invitation_sent=None).exclude(is_attending=False)
+
     for party in to_send_to:
         send_invitation_email(party, test_only=test_only)
         if mark_as_sent:
