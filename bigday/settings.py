@@ -144,7 +144,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = DEFAULT_WEDDING_REPLY_EMAIL
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = 'oymkncldgarpusml'
+EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 
 try:
     from .localsettings import *
